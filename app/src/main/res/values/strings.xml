@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">RandomJokeApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="randomjoke">RandomJoke</string>
+    <string name="textinput">TextInput</string>
+    <string name="string_neverendinglist" />
+    <string name="neverendinglist">NeverEndingList</string>
+</resources>

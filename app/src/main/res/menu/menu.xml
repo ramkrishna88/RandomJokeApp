@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/RandomJoke"
+        android:title="@string/randomjoke"
+        android:icon="@drawable/ic_launcher_background"
+        />
+    <item
+        android:id="@+id/textInput"
+        android:title="@string/textinput"
+        android:icon="@drawable/ic_launcher_background"/>
+
+    <item
+        android:id="@+id/List"
+        android:title="@string/neverendinglist"
+        android:icon="@drawable/ic_launcher_background"/>
+</menu>
