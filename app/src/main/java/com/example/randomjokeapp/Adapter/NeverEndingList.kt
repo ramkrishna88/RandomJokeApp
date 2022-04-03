@@ -1,48 +1,39 @@
 package com.example.randomjokeapp.Adapter
 
-
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import androidx.core.graphics.blue
 import androidx.recyclerview.widget.RecyclerView
-import com.example.randomjokeapp.JokesApp
-import com.example.randomjokeapp.R.id.randomJoke
-import com.squareup.picasso.Picasso
-import com.squareup.picasso.RequestCreator
-import kotlin.math.absoluteValue
+import com.example.randomjokeapp.databinding.JokeRandomItemBinding
+import com.example.randomjokeapp.model.Joke
+
+class NeverEndingListAdapter(
+    private val jokesData: MutableList<Joke> = mutableListOf()
+) : RecyclerView.Adapter<NeverEndingListViewHolder>(){
 
 
-class NeverEndingList(
-    private val jokesApp: MutableList<JokesApp> = mutableListOf()
-) : RecyclerView.Adapter<neverEndinListViewHolder>(){
-
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): neverEndinListViewHolder {
-       TODO()
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NeverEndingListViewHolder {
+       return NeverEndingListViewHolder(
+           JokeRandomItemBinding.inflate(
+               LayoutInflater.from(parent.context),
+               parent,
+               false
+           )
+       )
     }
-    override fun onBindViewHolder(holder: neverEndinListViewHolder, position: Int)  =
-       holder.bind(jokesApp[position])
+    override fun onBindViewHolder(holder: NeverEndingListViewHolder, position: Int)  =
+       holder.bind(jokesData[position])
 
 
-    override fun getItemCount(): Int = jokesApp.size
+    override fun getItemCount(): Int = jokesData.size
 }
 
-class neverEndinListViewHolder(
-    private val binding : RandomJokeItemBinding
+class NeverEndingListViewHolder(
+    private val binding : JokeRandomItemBinding
 ):RecyclerView.ViewHolder(binding.root){
-    class RandomJokeItemBinding(val root: View) {}
-    fun bind(jokesApp: JokesApp) {
-
-        Picasso.get()
-            .load(randomJoke.absoluteValue)
-            .fit()
-            .into(randomJoke.absoluteValue)
+    fun bind(joke: Joke) {
+        // todo here you bind the data to your views
+        // create the text views in the layout
     }
-
-}
-
-fun RequestCreator.into(blue: Int) {
 
 }
 
