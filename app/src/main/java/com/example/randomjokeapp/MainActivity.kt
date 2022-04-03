@@ -22,8 +22,6 @@ class MainActivity : AppCompatActivity() {
 
         val bottomNavigation =binding.bottomNavigationView
         val navController = findNavController(R.id.nav_container)
-        val toolbarNav = AppBarConfiguration(navController.graph)
-        setupActionBarWithNavController(navController,toolbarNav)
         bottomNavigation.setupWithNavController(navController)
     }
 }
